@@ -278,6 +278,7 @@ class GUI:
                 self.hw_joystick.set_mode(self.mode_label)
                 joystick_speed_data = self.hw_joystick.get_angular_vel()
                 speed_mode = self.hw_joystick.get_speed_mode()
+                speed_mode = 1
                 raw_ang = joystick_speed_data['x'] * speed_mode #normalize the linear speed by mode
                 raw_linear = joystick_speed_data['y'] * speed_mode  #normalize the linear speed by mode
             except Exception as e:
